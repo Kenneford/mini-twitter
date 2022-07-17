@@ -5,7 +5,7 @@ export default function RightPane({users}) {
 
   return (
     <div className='rightPane'>
-        <div>
+        <div className='rightPane-search'>
             <input type='text' 
             placeholder='Search Twitter' />
             <i className="fa-solid fa-magnifying-glass" id="search" title="Search"></i>
@@ -33,26 +33,26 @@ export default function RightPane({users}) {
         <div className='follow'>
             <h2>Who to follow</h2>
             <div className='userFollow'>
-                <img src={users.picture} alt='user-image1'/>
+                <img src={users[0].picture} alt='user-image1'/>
                 <div className='user-name'>
-                    <p></p>
-                    <p className='nickName'></p>
-                </div>
-                <button className="follow-btn"> Follow </button>
-            </div>
-            {/* <div className='userFollow'>
-                <img src={users[2].picture} alt='user-image1'/>
-                <div className='user-name'>
-                    <p>{users[2].name.first} {users[2].name.last} </p>
-                    <p className='nickName'>{users[2].username}</p>
+                    <p>{users[0].name.first} {users[0].name.last}</p>
+                    <p className='nickName'>@{users[0].username}</p>
                 </div>
                 <button className="follow-btn"> Follow </button>
             </div>
             <div className='userFollow'>
-                <img src={users[7].picture} alt='user-image1'/>
+                <img src={users[1].picture} alt='user-image1'/>
                 <div className='user-name'>
-                    <p>{users[7].name.first} {users[7].name.last} </p>
-                    <p className='nickName'>{users[7].username}</p>
+                    <p>{users[1].name.first} {users[1].name.last} </p>
+                    <p className='nickName'>@{users[1].username}</p>
+                </div>
+                <button className="follow-btn"> Follow </button>
+            </div>
+            <div className='userFollow'>
+                <img src={users[4].picture} alt='user-image1'/>
+                <div className='user-name'>
+                    <p>{users[4].name.first} {users[4].name.last} </p>
+                    <p className='nickName'>@{users[4].username}</p>
                 </div>
                 <button className="follow-btn"> Follow </button>
             </div>
@@ -60,10 +60,10 @@ export default function RightPane({users}) {
                 <img src={users[6].picture} alt='user-image1'/>
                 <div className='user-name'>
                     <p>{users[6].name.first} {users[6].name.last} </p>
-                    <p className='nickName'>{users[6].username}</p>
+                    <p className='nickName'>@{users[6].username}</p>
                 </div>
                 <button className="follow-btn"> Follow </button>
-            </div> */}
+            </div>
         </div>
 
         <div className='footer'>
@@ -71,6 +71,15 @@ export default function RightPane({users}) {
                 <p>Terms of Service</p>
                 <p>Privacy Policy</p>
                 <p>Cookies Policy</p>
+            </div>
+            <div className='policies'>
+                <p>Imprint</p>
+                <p>Accessibility</p>
+                <p>Ads info</p>
+                <p>More...</p>
+            </div>
+            <div className='policies'>
+                <p>&copy; 2022 Twitter, Inc.</p>
             </div>
         </div>
 
