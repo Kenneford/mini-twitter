@@ -123,21 +123,21 @@ import { useState, useEffect } from 'react';
 //     }
 
 // ]
-export default function Messages({messages, users}) {
-  if(!messages){
+export default function Messages({tweets, users}) {
+  if(!tweets){
     return <div>Loading messages...</div>
   }
   return (
     <div className='messages-cont'>
-        {messages.map((message, id) =>{
+        {tweets.map((tweet, id) =>{
             // console.log(message)
-            const user = users.find(e => e._id === message.author_id)
-            console.log(user)
+            const user = users.find(e => e._id === tweet.author_id)
+            // console.log(user)
             return(
               <div key={id}>
                 <Message
                 key={id}
-                message={message}
+                tweet={tweet}
                 users={users} 
                 />
                 </div> )})

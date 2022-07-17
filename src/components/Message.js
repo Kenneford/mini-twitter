@@ -1,7 +1,7 @@
 import React from 'react'
 import './Message.css'
 
-export default function Message({message, users}) {
+export default function Message({tweet, users}) {
 
   if(!users){
     users={picture:"", username:""}
@@ -12,9 +12,9 @@ export default function Message({message, users}) {
         <img src={users[5].picture} alt='' width='50px'  height="50px"/>
         {/* <p>{message.author_id}</p> */}
         <p>{users[5].username}</p>
-        <p>{message.date}</p>
+        <p>{tweet.date}</p>
       </div>
-        <p className='tweet'>{message.text}</p>
+        <p className='tweet'>{tweet.text}</p>
         <div className='reactions'>
           <p><i className="fa-regular fa-comment-dots"></i></p>
           <p><i className="fa-regular fa-retweet"></i></p>
